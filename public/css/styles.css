@@ -20,9 +20,11 @@ ul{
 }
 .descriptions{
     font-size: 16px;
+    display: none;
 }
 div.burger-menu{
     text-align: center;
+    margin: auto;
 }
 
 .burger-menu{
@@ -48,5 +50,46 @@ footer{
 header p{
     text-align: center;
 }
+*{
+    box-sizing: border-box;
+}
+
+main{
+    margin: auto;
+    width: 90vw;
+    display: block;
+}
+main article{
+    margin-top: 10px;
+    padding: 15px 15px;
+    width: 100%;
+}
+.description-article{
+    border-top: 1px solid #ebebeb;
+}
+nav{
+    display: none;
+}
+
+
+@media (min-width:361px){
+    main article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    nav{
+        display: block;
+    }
+    .descriptions{
+        display: block;
+    }
+    .burger-menu{
+        display: none;
+    }
+}
+
+@media (min-width:769px) {
+    
+}
+
 
 
