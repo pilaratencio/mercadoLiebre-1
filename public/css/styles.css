@@ -2,28 +2,50 @@ head{
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
 }
-header{
+.main-header{
     background-color: #EAC926;
+    padding: 20px;
+}
+.logo{
+    width: 200px;
+}
+.copy-header{
+    font-weight: 400;
+    text-align: center;
 }
 
 ul{
     padding-left: 0%;
+    color: black;
+    text-decoration: none;
+}
+.main-nav-bar a{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
 }
 .titles{
     font-size: 24px;
 }
 .prices{
     font-size: 18px;
+    flex-grow: 30%;
 }
 .descuentos{
     font-size: 16px;
+    color: #39b54a;
+    padding-left: 10px;
+    flex-grow: 70%;
 }
 .descriptions{
     font-size: 16px;
     display: none;
 }
-div.burger-menu{
+a.burger-menu{
     text-align: center;
+    display: block;
     margin: auto;
 }
 
@@ -52,6 +74,8 @@ header p{
 }
 *{
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 main{
@@ -66,9 +90,48 @@ main article{
 }
 .description-article{
     border-top: 1px solid #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
 }
 nav{
     display: none;
+}
+main section article div i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    right: 20px;
+    top: -15px;
+}
+
+
+header .form{
+    width: 50%;
+}
+header .form{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+}
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+header .form .submit{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 10%;
 }
 
 
@@ -77,19 +140,43 @@ nav{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     nav{
-        display: block;
+        display:block;
     }
     .descriptions{
         display: block;
     }
-    .burger-menu{
+    a.burger-menu{
         display: none;
+    }
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+    .prices,
+    .descuentos{
+        width: 50%;
     }
 }
 
 @media (min-width:769px) {
-    
+    .main-header-top-bar{
+        display: flex;
+        justify-content: space-between;
+    }    
+    .copy-header{
+        max-width: 350px;
+        text-align: right;
+    }
+    main section div.products article{
+        width: 22%;
+    }
 }
-
 
 
