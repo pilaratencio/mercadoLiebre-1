@@ -6,6 +6,8 @@ const { send } = require("process");
 const publicPath = path.resolve(__dirname,'./public');
 app.use(express.static(publicPath));
 
+app.set('puerto',process.env.PORT ||3000);
+
 app.get('/',(req,res)=>res.sendFile(path.resolve(__dirname,'./views/home.html')))
 
 app.get('/login', (req,res)=>{
@@ -16,7 +18,8 @@ app.get('/register', (req,res)=>{
     res.sendFile(__dirname + '/views/register.html');
 });
 
-app.listen('4000', ()=>console.log('Servidor corriendo en puerto 4000'))
+app.listen(app.get('puerto'), ()=>console.log('Servidor corriendo de manera satisfactoria'));
+
 
 
 
